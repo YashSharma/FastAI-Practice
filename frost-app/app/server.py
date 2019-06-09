@@ -31,7 +31,7 @@ async def setup_learner():
     #     ds_tfms=get_transforms(), size=256).normalize(imagenet_stats)
     # learn = cnn_learner(data_bunch, models.resnet34, pretrained=False)
     # learn.load(model_file_name)
-    learn = load_learner(path)
+    learn = load_learner(path/'models')
     return learn
 
 loop = asyncio.get_event_loop()
